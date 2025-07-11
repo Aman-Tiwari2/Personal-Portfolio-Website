@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Add a New Diet Plan</h2>
+  <form method="POST">
+    <label>Type:</label>
+    <input type="text" name="type" placeholder="vegetarian or non-vegetarian" required>
+
+    <label>Meal:</label>
+    <input type="text" name="meal" placeholder="breakfast, lunch..." required>
+
+    <label>Items (comma-separated):</label>
+    <input type="text" name="items" placeholder="e.g. oats, banana, green tea" required>
+
+    <button type="submit">Add Plan</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>All Diet Plans</h2>
+  {% if diets %}
+    {% for diet in diets %}
+      <div class="card">
+        <strong>Type:</strong> {{ diet['type'] | capitalize }}<br>
+        <strong>Meal:</strong> {{ diet['meal'] | capitalize }}<br>
+        <strong>Items:</strong> {{ diet['items'] | join(', ') }}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No diet plans found. <a href="/add">Add one</a>.</p>
+  {% endif %}
+{% endblock %}
